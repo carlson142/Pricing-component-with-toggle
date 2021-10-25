@@ -1,0 +1,208 @@
+:root {
+  --color-primary-very-light-grayish-blue: hsl(240, 78%, 98%);
+  --color-primary-light-grayish-blue: hsl(234, 14%, 74%);
+  --color-primary-grayish-blue: hsl(233, 13%, 49%);
+  --color-primary-dark-grayish-blue: hsl(232, 13%, 33%);
+  /*
+    Main gradient: Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+  */ }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden; }
+  @media (max-width: 880px) {
+    body {
+      height: 100%; } }
+
+main {
+  height: 100%;
+  width: 144rem;
+  background-color: var(--color-primary-very-light-grayish-blue);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 880px) {
+    main {
+      width: 375px;
+      overflow: hidden;
+      padding: 5rem 2rem; } }
+
+.bg__top {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  @media (max-width: 880px) {
+    .bg__top {
+      top: -4rem;
+      right: -20rem; } }
+
+.bg__bot {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+  @media (max-width: 880px) {
+    .bg__bot {
+      display: none; } }
+
+.main-heading {
+  font-size: 3.5rem;
+  color: var(--color-primary-grayish-blue);
+  margin-bottom: 2rem; }
+
+.sub {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7rem; }
+
+.ann,
+.mon {
+  font-size: 1.6rem;
+  color: var(--color-primary-light-grayish-blue); }
+
+.toggle {
+  margin-left: 2rem;
+  margin-right: 2rem; }
+
+.input-btn {
+  display: none; }
+
+.btn-toggle {
+  display: inline-block;
+  height: 3rem;
+  width: 6rem;
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in; }
+  .btn-toggle::after {
+    content: "";
+    display: block;
+    height: 2.3rem;
+    width: 2.3rem;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 34px;
+    transition: all 0.3s ease-in; }
+  .btn-toggle:hover {
+    opacity: 0.7; }
+
+.input-btn:checked ~ .label-btn .btn-toggle::after {
+  left: 3px; }
+
+.component {
+  width: 100rem;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center; }
+  @media (max-width: 1050px) {
+    .component {
+      width: 90rem; } }
+  @media (max-width: 950px) {
+    .component {
+      width: 85rem; } }
+  @media (max-width: 880px) {
+    .component {
+      flex-direction: column; } }
+
+.card {
+  height: 45rem;
+  width: 33%;
+  border-radius: 1rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.116); }
+  @media (max-width: 880px) {
+    .card {
+      width: 38%; }
+      .card:not(:last-child) {
+        margin-bottom: 3rem; } }
+  .card__name {
+    font-size: 1.8rem;
+    color: var(--color-primary-grayish-blue); }
+  .card__price {
+    font-size: 7rem;
+    color: var(--color-primary-dark-grayish-blue);
+    transition: all 0.3s ease-in; }
+    @media (max-width: 950px) {
+      .card__price {
+        font-size: 5rem; } }
+    @media (max-width: 880px) {
+      .card__price {
+        font-size: 6rem; } }
+  .card__list {
+    list-style: none;
+    width: 100%;
+    text-align: center; }
+  .card__item {
+    font-size: 1.5rem;
+    color: var(--color-primary-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.19); }
+    .card__item:last-child {
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.19); }
+
+.card-1 {
+  background-color: white; }
+
+.card-2 {
+  background-image: linear-gradient(to right bottom, #a3a8f0, #696fdd);
+  height: 50rem;
+  padding: 6rem 4rem; }
+
+.card-3 {
+  background-color: white; }
+
+.btn {
+  width: 100%;
+  height: 4rem;
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  letter-spacing: 1px;
+  border-radius: 1rem;
+  cursor: pointer; }
+  .btn--blue {
+    background: linear-gradient(to right, #a3a8f0, #696fdd);
+    color: white;
+    transition: all 0.3s ease-in; }
+    .btn--blue:hover {
+      color: #696fdd;
+      background: transparent;
+      border: 1px solid #696fdd; }
+  .btn--white {
+    background-color: white;
+    color: #696fdd;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in; }
+    .btn--white:hover {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white; }
